@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>तायामी खाजा घर | चुलाचुली, इलाम</title>
+
+    <meta name="description" content="तायामी खाजा घर, चुलाचुली इलाम। दैनिक जीवनका लागि किफायती फास्ट फुड तथा खाजाका परिकारहरू।">
+
+    <meta name="theme-color" content="#fffaf3">
+
+    <style>
+        /* =========================
+           1. GENERAL STYLING
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: "Noto Sans Devanagari",
+                         "Nirmala UI",
+                         Mangal,
+                         Arial,
+                         sans-serif;
+            background-color: #fffaf3;
+            color: #30251f;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* =========================
+           2. NAVIGATION
+        ========================== */
+
+        header {
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            color: #c94b20;
+            font-size: 23px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #30251f;
+            font-size: 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e45c24;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid #e8d8cc;
+            color: #a93415;
+            padding: 7px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 22px;
+        }
+
+        /* =========================
+           3. HERO SECTION
+        ========================== */
+
+        .hero {
+            background: linear-gradient(
+                135deg,
+                #fff0dc,
+                #ffe0c2
+            );
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #ffffff;
+            color: #c94b20;
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            color: #a93415;
+            font-size: clamp(34px, 6vw, 55px);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #5d4638;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           4. BUTTONS
+        ========================== */
+
+        .btn {
+            display: inline-block;
+            padding: 13px 27px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 7px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #d94e20;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #a93415;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            color: #c94b20;
+            border: 2px solid #d94e20;
+        }
+
+        .btn-secondary:hover {
+            background: #fff0dc;
+        }
+
+        .whatsapp {
+            background: #168c4b;
+            color: white;
+        }
+
+        .whatsapp:hover {
+            background: #106d39;
+        }
+
+        /* =========================
+           5. GENERAL SECTIONS
+        ========================== */
+
+        section {
+            padding: 75px 0;
+            scroll-margin-top: 75px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            color: #a93415;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #766457;
+            font-size: 16px;
+        }
+
+        /* =========================
+           6. PRODUCTS
+        ========================== */
+
+        .products {
+            background: #ffffff;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #fffaf3;
+            border: 1px solid #f1dfcd;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .product-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            color: #a93415;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: #766457;
+            font-size: 15px;
+        }
+
+        /* =========================
+           7. ABOUT US
+        ========================== */
+
+        .about {
+            background: #fff0dc;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 17px;
+            color: #5d4638;
+            margin-bottom: 15px;
+        }
+
+        .about-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           8. WHY CHOOSE US
+        ========================== */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 12px;
+            border-bottom: 4px solid #e45c24;
+            text-align: center;
+        }
+
+        .why-card .icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .why-card h3 {
+            color: #a93415;
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #766457;
+            font-size: 15px;
+        }
+
+        /* =========================
+           9. CONTACT
+        ========================== */
+
+        .contact {
+            background: #fff0dc;
+        }
+
+        .contact-content {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .contact-card p {
+            margin: 15px 0;
+            font-size: 17px;
+        }
+
+        .contact-card strong {
+            color: #a93415;
+        }
+
+        /* =========================
+           10. FOOTER
+        ========================== */
+
+        footer {
+            background: #30251f;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #e8d8cc;
+            margin: 5px 0;
+        }
+
+        footer .footer-name {
+            color: #ffb17c;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           11. ACCESSIBILITY
+        ========================== */
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #d94e20;
+            outline-offset: 4px;
+        }
+
+        /* =========================
+           12. MOBILE RESPONSIVE
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            nav {
+                min-height: 70px;
+                flex-wrap: wrap;
+                padding: 12px 0;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding-bottom: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                border-top: 1px solid #f1dfcd;
+            }
+
+            .hero {
+                padding: 75px 15px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .product-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 27px;
+            }
+
+            .contact-card {
+                padding: 22px 15px;
+            }
+
+            .btn {
+                padding: 12px 20px;
+            }
+        }
+
+        /* Small Mobile Screens */
+
+        @media (max-width: 380px) {
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .btn {
+                width: 100%;
+                margin: 7px 0;
+            }
+        }
+
+        /* Reduce motion for accessibility */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <div class="container">
+
+            <nav aria-label="मुख्य नेभिगेसन">
+
+                <a href="#home" class="logo">
+                    तायामी खाजा घर
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="मेनु खोल्नुहोस्"
+                    aria-expanded="false"
+                    aria-controls="navLinks">
+                    ☰
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li><a href="#home">गृहपृष्ठ</a></li>
+
+                    <li><a href="#products">हाम्रा परिकार</a></li>
+
+                    <li><a href="#about">हाम्रो बारेमा</a></li>
+
+                    <li><a href="#why-us">किन हामी?</a></li>
+
+                    <li><a href="#contact">सम्पर्क</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HOMEPAGE -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                📍 चुलाचुली बजार, इलाम
+            </span>
+
+            <h1>तायामी खाजा घर</h1>
+
+            <p>
+                दैनिक जीवनका लागि स्वादिष्ट, किफायती र सहज रूपमा
+                उपलब्ध फास्ट फुड तथा खाजाको स्वाद लिनुहोस्।
+            </p>
+
+            <a href="#products" class="btn btn-primary">
+                हाम्रा परिकार हेर्नुहोस्
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+                हामीलाई सम्पर्क गर्नुहोस्
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="products" id="products">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>🍟 हाम्रा परिकारहरू</h2>
+
+                <p>
+                    तपाईंको दैनिक खाजाका लागि स्वागत छ।
+                </p>
+
+            </div>
+
+            <div class="product-grid">
+
+                <div class="product-card">
+
+                    <div class="product-icon">🍔</div>
+
+                    <h3>फास्ट फुड</h3>
+
+                    <p>
+                        विभिन्न फास्ट फुडका परिकारहरू।
+                    </p>
+
+                </div>
+
+                <div class="product-card">
+
+                    <div class="product-icon">🥪</div>
+
+                    <h3>हल्का खाजा</h3>
+
+                    <p>
+                        दैनिक खाजाका लागि सहज विकल्पहरू।
+                    </p>
+
+                </div>
+
+                <div class="product-card">
+
+                    <div class="product-icon">🍽️</div>
+
+                    <h3>अन्य खाजाहरू</h3>
+
+                    <p>
+                        उपलब्ध खाजा तथा परिकारहरूबारे जानकारी लिनुहोस्।
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT US -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>हाम्रो बारेमा</h2>
+
+                <p>
+                    तायामी खाजा घरमा तपाईंलाई हार्दिक स्वागत छ।
+                </p>
+
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-icon">🍽️</div>
+
+                <p>
+                    तायामी खाजा घर चुलाचुली, इलामको बजार क्षेत्रमा
+                    अवस्थित फास्ट फुड तथा खाजा घर हो।
+                </p>
+
+                <p>
+                    हाम्रो उद्देश्य दैनिक जीवनमा सहज रूपमा उपलब्ध हुने
+                    किफायती खाजा तथा फास्ट फुड उपलब्ध गराउनु हो।
+                </p>
+
+                <p>
+                    बजारको केन्द्रमा रहेको हाम्रो खाजा घरमा
+                    विद्यार्थी तथा स्थानीय ग्राहकहरूलाई स्वागत छ।
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section id="why-us">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>किन रोज्ने तायामी खाजा घर?</h2>
+
+                <p>
+                    तपाईंका लागि सहज र किफायती खाजाको ठाउँ।
+                </p>
+
+            </div>
+
+            <div class="why-grid">
+
+                <div class="why-card">
+
+                    <div class="icon">💰</div>
+
+                    <h3>किफायती मूल्य</h3>
+
+                    <p>
+                        दैनिक जीवनमा सहज हुने र बजेटमैत्री
+                        खाजाको विकल्प।
+                    </p>
+
+                </div>
+
+                <div class="why-card">
+
+                    <div class="icon">📍</div>
+
+                    <h3>सहज स्थान</h3>
+
+                    <p>
+                        चुलाचुली बजारको केन्द्रमा रहेको
+                        सहज रूपमा पुग्न सकिने स्थान।
+                    </p>
+
+                </div>
+
+                <div class="why-card">
+
+                    <div class="icon">🎒</div>
+
+                    <h3>विद्यार्थीमैत्री</h3>
+
+                    <p>
+                        विद्यालय तथा विद्यार्थीहरूका लागि
+                        सहज रूपमा पुग्न सकिने खाजा घर।
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>हामीलाई सम्पर्क गर्नुहोस्</h2>
+
+                <p>
+                    हामीलाई सम्पर्क गर्न वा हाम्रो स्थानमा आउनुहोस्।
+                </p>
+
+            </div>
+
+            <div class="contact-content">
+
+                <div class="contact-card">
+
+                    <p>
+                        📍 <strong>ठेगाना:</strong><br>
+                        चुलाचुली, इलाम, कोशी प्रदेश, नेपाल
+                    </p>
+
+                    <p>
+                        📱 <strong>फोन नम्बर:</strong><br>
+                        +977-9866289291
+                    </p>
+
+                    <a
+                        href="tel:+9779866289291"
+                        class="btn btn-primary">
+                        📞 फोन गर्नुहोस्
+                    </a>
+
+                    <a
+                        href="https://wa.me/9779866289291"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn whatsapp">
+                        💬 WhatsApp गर्नुहोस्
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <p class="footer-name">
+                तायामी खाजा घर
+            </p>
+
+            <p>
+                स्वादिष्ट खाजा, किफायती मूल्य र सहज स्थान।
+            </p>
+
+            <p>
+                © <span id="year"></span>
+                तायामी खाजा घर। सर्वाधिकार सुरक्षित।
+            </p>
+
+            <p>
+                📍 चुलाचुली, इलाम, नेपाल
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // Automatic current year
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // Mobile navigation menu
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen =
+                navLinks.classList.toggle("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "मेनु बन्द गर्नुहोस्" : "मेनु खोल्नुहोस्"
+            );
+
+            menuToggle.textContent =
+                isOpen ? "✕" : "☰";
+
+        });
+
+
+        // Close mobile menu after selecting a section
+
+        document.querySelectorAll(".nav-links a").forEach(
+            function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navLinks.classList.remove("active");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "मेनु खोल्नुहोस्"
+                    );
+
+                    menuToggle.textContent = "☰";
+
+                });
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
